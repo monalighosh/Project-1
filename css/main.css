@@ -1,0 +1,321 @@
+/* External fonts */
+@import url(font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,500italic);
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+@import url(https://fonts.googleapis.com/css?family=Lora:400italic);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  height: 100%;
+}
+
+body { 
+     
+     color: #000;
+     font-family: 'Roboto', sans-serif;
+     font-size: 16px;
+     line-height: 26px;
+     font-weight: 400;
+     text-align: center;
+     letter-spacing: 1px;
+     min-height: 100%;
+
+       background: #FFFFFF url("../images/img-bg.jpg") no-repeat center center fixed; 
+         -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+} 
+
+
+@media (max-width: 980px) {
+  body { font-size: 16px; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+}
+
+@media (max-width: 400px) {
+  body { font-size: 13px; }
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 400; 
+} 
+
+h1 {
+  font-size: 7em;
+  font-family: 'Questrial', sans-serif;
+  padding-bottom: 0.5em;
+  letter-spacing: 1px;
+text-shadow: -5px 5px 25px rgba(0,0,0,0.3);
+}
+
+h2 {
+  font-size: 2.4em;
+  padding-bottom: 0.6em;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-size: 2em;
+  padding: 0.6em;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  letter-spacing: 0;
+  line-height: 1.3em;
+}
+
+h3::before {
+  content: "\201C";
+  margin-right: 0.2em;
+  font-weight: 700;
+}
+
+h3::after {
+  content: "\201D";
+  margin-right: 0.2em;
+  font-weight: 700;
+}
+
+
+h4 {
+  font-size: 1.5em;
+  padding-bottom: 0.6em;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+
+hr {
+  display: block;
+  width: 15%;
+  margin: 1em auto;
+  border: 1px solid #000;
+}
+/* Structure */  
+
+#wrapper {
+height: 300px;
+position: absolute;
+   top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+  width: 100%;
+  min-width: 320px;
+}
+
+
+
+/* Main Menu */
+#navcontainer 
+ {
+  position: absolute;
+  right: 0;
+  bottom: 1em;
+  left: 0;
+  padding: 1em;
+  list-style-type: none;
+  background-color: rgba(0,0,0,0.2);
+  text-align: center;
+  box-shadow: 0 0 35px 5px rgba(0,0,0,0.2);
+}
+
+.navlist {
+  display: inline-block;
+}
+
+.navlist li { 
+  display: inline-block; 
+}
+
+.navlist li a {
+   text-decoration: none;
+   color: #ffdbc9;
+   padding: 0 1em;
+}
+
+.navlist li a::before,
+.navlist li a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.navlist li a::before {
+  margin-right: 0.6em;
+  content: '[';
+  -webkit-transform: translateX(1.2em);
+  -moz-transform: translateX(1.2em);
+  transform: translateX(1.2em);
+}
+
+.navlist li a::after {
+  margin-left: 0.6em;
+  content: ']';
+  -webkit-transform: translateX(-1.2em);
+  -moz-transform: translateX(-1.2em);
+  transform: translateX(-1.2em);
+}
+
+.navlist li a:hover::before,
+.navlist li a:hover::after,
+.navlist li a:focus::before,
+.navlist li a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+
+
+/* Media Queries */
+
+
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+  
+h1 {
+  font-size: 6em;
+  padding-bottom: 0.4em;
+}
+
+h2 {
+  font-size: 2em;
+  padding-bottom: 0.6em;
+}
+
+#navcontainer 
+ {
+  padding: 1em;
+  margin: 1em auto;
+  list-style-type: none;
+  background-color: rgba(0,0,0,0.2);
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 0 35px 5px rgba(0,0,0,0.2);
+}
+
+.navlist li { 
+  display: block; 
+}
+  
+}
+
+/* for 600px or less */
+@media screen and (max-width: 600px) {
+
+  #wrapper {
+height: 300px;
+position: absolute;
+   top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+  width: 100%;
+}
+
+
+h1 {
+  font-size: 4em;
+  padding-bottom: 0.4em;
+}
+
+h2 {
+  font-size: 1.6em;
+  padding-bottom: 0.6em;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding: 0.4em;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  letter-spacing: 0;
+  line-height: 1.3em;
+}
+
+h4 {
+  font-size: 1em;
+  padding-bottom: 0.6em;
+  font-family: 'Raleway', sans-serif;
+}
+
+hr {
+  width: 40%;
+  margin: 0.5em auto;
+}
+
+}
+
+/* for 400px or less */
+@media screen and (max-width: 400px) {
+
+
+h1 {
+  font-size: 3.2em;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.3em;
+  padding-bottom: 0.4em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding: 0.4em;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  letter-spacing: 0;
+  line-height: 1.3em;
+}
+
+h4 {
+  font-size: 1em;
+  padding-bottom: 0.6em;
+  font-family: 'Raleway', sans-serif;
+}
+
+hr {
+  width: 40%;
+  margin: 0.5em auto;
+}
+
+#navcontainer 
+ {
+  padding: 1em;
+  margin: 1em auto;
+  list-style-type: none;
+  background-color: rgba(0,0,0,0.2);
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 0 35px 5px rgba(0,0,0,0.2);
+}
+
+.navlist li { 
+  display: block; 
+}
+
+}
